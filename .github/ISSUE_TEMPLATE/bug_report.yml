@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a problem with the repository, documentation, or a working feature.
+title: "Bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "DocHeal has no runnable checker yet. If your report is about a proposed feature, please use the feature request form."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and where you saw it.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: Include a link, file path, or exact steps. Do not include secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Other context
+      description: Add screenshots or environment details if they help. Please remove private data first.
