@@ -1,6 +1,6 @@
 ## Why
 
-Link the issue and explain the problem this PR addresses.
+Explain the problem this PR addresses. Link an issue if there is one.
 
 ## What changed
 
@@ -12,7 +12,7 @@ List the commands or manual checks you ran. If something could not be checked, s
 
 ## Before submitting
 
-- [ ] The change stays within the linked issue's scope.
+- [ ] The change is focused and matches any linked issue.
 - [ ] Documentation describes what exists today and marks plans as plans.
 - [ ] New links and Markdown render correctly.
 - [ ] Tests were added or updated where behavior can regress, or I explained why they are not applicable.
