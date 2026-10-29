@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a small improvement or a documentation drift case to support.
+title: "Proposal: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: A real code change and the documentation it might affect are especially helpful.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like DocHeal to do?
+      description: Describe the expected behavior in plain language. A small example is welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Boundaries or alternatives
+      description: What should this proposal leave out? Have you considered a simpler approach?
