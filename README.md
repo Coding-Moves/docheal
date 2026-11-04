@@ -2,7 +2,7 @@
 
 **Keep documentation healthy as code changes.**
 
-DocHeal is an early [Coding Moves Lab](https://codingmoves.netlify.app/lab/) project. The idea is simple: when code changes, help maintainers find the docs that may need another look.
+DocHeal is an early [Coding Moves Lab](https://codingmoves.com/lab/) project. The idea is simple: when code changes, help maintainers find the docs that may need another look.
 
 Imagine an API field changes from `user_name` to `display_name`, but a guide still tells readers to use `user_name`. That guide has drifted from the code. DocHeal should point to the change and the guide so a person can decide what to fix. It should not silently rewrite the page or pretend it can prove every document correct.
 
@@ -35,7 +35,7 @@ Small, self-contained examples are especially helpful. The [examples guide](exam
 - [ ] Document real commands, configuration, and limits once they exist.
 - [ ] Explore pull request checks after the local workflow is useful.
 
-DocHeal will stay in [Coding Moves Lab](https://codingmoves.netlify.app/lab/) while we test the idea. After a first working release, we plan to move its website listing to [Coding Moves Open Source](https://codingmoves.netlify.app/open-source/).
+DocHeal will stay in [Coding Moves Lab](https://codingmoves.com/lab/) while we test the idea. After a first working release, we plan to move its website listing to [Coding Moves Open Source](https://codingmoves.com/open-source/).
 
 ## License
 
