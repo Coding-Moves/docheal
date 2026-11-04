@@ -13,6 +13,12 @@ must exist at both revisions; the guide is read at the newer revision. No
 GitHub connection or AI service is needed. Issue #3 will settle the command
 syntax and how invalid paths or revisions are reported.
 
+The local workflow is to commit a CLI change, choose the commit before it as
+the base and the new commit as the head, and give the checker the paths to the
+CLI file and its guide. A maintainer then reviews any reported reference and
+updates the guide if it is stale. If the guide was updated in the same commit,
+the check should find no old reference.
+
 In the source file, v1 will recognize literal long options passed directly to
 `parser.add_argument()`, where `parser` is created by
 `argparse.ArgumentParser()` in the same module. If an option exists at the older
@@ -48,7 +54,9 @@ Run the command with `--user-name`.
 ```
 
 Given the two revisions and the paths `cli.py` and `guide.md`, DocHeal should
-point to that guide reference as a possible stale instruction.
+produce one possible drift finding. Its evidence is the removed option in
+`cli.py` at base line 4 and the surviving reference in `guide.md` at head line
+1. The report format for those references belongs to issue #2.
 
 For a quiet case, make the same code change and update `guide.md` to contain:
 
@@ -56,7 +64,7 @@ For a quiet case, make the same code change and update `guide.md` to contain:
 Run the command with `--display-name`.
 ```
 
-There is no old option reference to report. It should also stay quiet if
+That case should produce zero drift findings. It should also stay quiet if
 `--user-name` remains declared as a compatibility option.
 
 ## Limits for this first version
