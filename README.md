@@ -12,14 +12,9 @@ This is an **idea-stage repository**. There is no checker, CLI, package, or test
 
 ## The first version we want to build
 
-The first version should run locally and do one narrow job well:
+The proposed first check is small: compare two local Git revisions of a Python `argparse` CLI file, then flag a removed long option still named in an inline code span in a specified Markdown guide. The [design note](docs/first-check.md) shows when it should report a possible problem, when it should stay quiet, and what it will not cover.
 
-1. Read a set of code changes.
-2. Find documentation that may be affected.
-3. Apply a small, deterministic check.
-4. Report possible drift with references to the code and documentation.
-
-We still need to choose the first check, supported inputs, and report format. Those decisions come before a package or installation guide. A local checker should work without an AI key or a hosted service.
+The checker and its command do not exist yet. The report format and command syntax still need to be designed. The local check should work without an AI key or a hosted service.
 
 If that proves useful, we can consider more checks, repository configuration, and a GitHub pull request integration. AI-assisted analysis might help with harder cases later, but it would be optional. Findings should always give maintainers enough evidence to review them, and any GitHub integration should use only the permissions it needs.
 
@@ -33,8 +28,8 @@ Small, self-contained examples are especially helpful. The [examples guide](exam
 
 ## Roadmap
 
-- [ ] Agree on the first supported drift case and input format.
-- [ ] Gather positive examples and cases that should stay quiet.
+- [x] Define the first supported drift case and inputs.
+- [ ] Gather more positive examples and cases that should stay quiet.
 - [ ] Define a clear finding and report format.
 - [ ] Build and test the first local check.
 - [ ] Document real commands, configuration, and limits once they exist.
