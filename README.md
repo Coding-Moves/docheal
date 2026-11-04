@@ -37,6 +37,20 @@ Small, self-contained examples are especially helpful. The [examples guide](exam
 
 DocHeal will stay in [Coding Moves Lab](https://codingmoves.com/lab/) while we test the idea. After a first working release, we plan to move its website listing to [Coding Moves Open Source](https://codingmoves.com/open-source/).
 
+## Glossary
+
+- **Documentation drift:** When documentation no longer matches the actual code or current project behavior.
+- **Finding:** A reported issue that may indicate a problem in the documentation.
+- **Source reference:** A pointer to the code or other source material used to check whether documentation is accurate.
+- **Documentation reference:** A pointer to the part of the documentation being discussed or checked.
+- **False positive:** A reported finding that is not actually a problem.
+
+### Example
+
+Suppose a guide still says to use `--user-name` after the code removes that option. This is possible documentation drift. A future finding could point to the removed option in the code (the source reference) and the old option in the guide (the documentation reference). If the guide mentions the old option on purpose, that finding would be a false positive.
+
+DocHeal does not run this check yet; these terms describe the planned workflow.
+
 ## License
 
 DocHeal is licensed under the [MIT License](LICENSE).
